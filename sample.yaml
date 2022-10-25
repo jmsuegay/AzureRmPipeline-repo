@@ -7,8 +7,8 @@ variables:
   vmImageName: 'ubuntu-latest'
 
   azureServiceConnection: 'TestConnection1'
-  resourceGroupName: 'exampleRG'
-  location: 'Est US'
+  resourceGroupName: 'exampleRG1234567890'
+  location: 'East US'
   templateFile: 'main.bicep'
 pool:
   vmImage: $(vmImageName)
