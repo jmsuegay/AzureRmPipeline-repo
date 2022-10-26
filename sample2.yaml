@@ -9,6 +9,7 @@ variables:
   azureServiceConnection: 'TestConnection1'
   resourceGroupName: 'rgdemo1026jc'
   location: 'AustraliaEast'
+  templateFile: 'ubuntu.bicep'
 pool:
   vmImage: $(vmImageName)
 
@@ -20,4 +21,5 @@ steps:
     scriptLocation: inlineScript
     inlineScript: |
       az --version
-      az group create --name $(resourceGroupName) --location $(location)
+      az group create --name rgdemo1026jc --location AustraliaEast
+      az deployment group create --resource-group $(resourceGroupName) --template-file $(templateFile)
