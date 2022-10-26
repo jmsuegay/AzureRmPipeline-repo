@@ -22,4 +22,4 @@ steps:
     inlineScript: |
       az --version
       az group create --name rgdemo1026jc --location AustraliaEast
-      az deployment group create --resource-group $(resourceGroupName) --template-file $(templateFile)
+      az deployment group create --resource-group $(resourceGroupName) --template-file $(templateFile) --parameters adminUsername=vmadmin1 adminPasswordOrKey=P@ssw0rd123
