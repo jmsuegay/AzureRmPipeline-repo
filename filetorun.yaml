@@ -11,7 +11,7 @@ variables:
   location: 'AustraliaEast'
   templateFile: 'wincore.bicep'
   adminUsername: 'vmadmin1'
-  adminPassword: '123qwerty123'
+  adminPassword: 'Qwerty123!!!'
 pool:
   vmImage: $(vmImageName)
 
