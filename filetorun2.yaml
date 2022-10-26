@@ -4,15 +4,13 @@ trigger:
 name: Deploy Bicep files
 
 parameters:
-  name: resourceGroupName
-  type: string
-  
-  name: vmName
-  type: string
-  
-  name: adminUsername
-  type: string
-
+  - name: resourceGroupName
+    type: string
+  - name: vmName
+    type: string
+  - name: adminUserName
+    type: string
+    
 variables:
   vmImageName: 'windows-2019'
 
