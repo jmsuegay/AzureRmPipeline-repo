@@ -10,6 +10,8 @@ variables:
   resourceGroupName: 'rgdemowincore19'
   location: 'AustraliaEast'
   templateFile: 'wincore.bicep'
+  adminUsername: 'vmadmin1'
+  adminPassword: 'qwerty123'
 pool:
   vmImage: $(vmImageName)
 
@@ -22,4 +24,4 @@ steps:
     inlineScript: |
       az --version
       az group create --name $(resourceGroupName) --location $(location)
-      az deployment group create --resource-group $(resourceGroupName) --template-file $(templateFile)
+      az deployment group create --resource-group $(resourceGroupName) --template-file $(templateFile) --parameters adminUsername=$(adminUsername) adminPassword=$(adminPassword)
