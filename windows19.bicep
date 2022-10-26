@@ -2,7 +2,7 @@ param adminUsername string = 'vmadmin1'
 @minLength(12)
 @secure()
 param adminPassword string = 'P@ssw0rd123!'
-param dnsLabelPrefix string = toLower('${vmName}-${uniqueString(resourceGroup().id, vmName)}')
+param dnsLabelPrefix string = toLower('${vmName}-${uniqueString(resourceGroup().id)}')
 param publicIpName string = 'myPublicIP'
 param publicIPAllocationMethod string = 'Dynamic'
 param publicIpSku string = 'Basic'
