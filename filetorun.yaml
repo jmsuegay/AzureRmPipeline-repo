@@ -9,7 +9,7 @@ variables:
   azureServiceConnection: 'TestConnection1'
   resourceGroupName: 'rgdemowincore19'
   location: 'AustraliaEast'
-  templateFile: 'wincor.bicep'
+  templateFile: 'wincore.bicep'
 pool:
   vmImage: $(vmImageName)
 
