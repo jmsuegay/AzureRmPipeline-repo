@@ -31,3 +31,12 @@ steps:
       az --version
       az group create --name ${{parameters.resourceGroupName}} --location $(location)
       az deployment group create --resource-group ${{parameters.resourceGroupName}} --template-file $(templateFile) --parameters adminUsername=${{parameters.adminUsername}} adminPassword=$(adminPassword)
+
+- task: PublishPipelineArtifact@0
+  inputs:
+    targetPath: '$(Pipeline.Workspace)'
+    artifactName: 'My Artifact'
+
+
+
+
