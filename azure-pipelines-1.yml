@@ -1,0 +1,17 @@
+trigger:
+- main
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+parameters:
+  - name: runSecondTask
+    default: true
+
+steps:
+- script: echo Hello, world!
+  displayName: 'Run a one-line script'
+
+- ${{ if eq(parameters.runSecondTask, 'true') }}: 
+  - script: echo This is a hidden task
+    displayName: 'Run hidden task'
